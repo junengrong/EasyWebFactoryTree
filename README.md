@@ -1,7 +1,7 @@
 # EasyWebFactoryTree
 this is a tree component, jquery and font-awesome is required
 
-for example:
+# tree category for example:
 
         var categorydata = [{
                 id: 2,
@@ -60,7 +60,8 @@ for example:
                 }
             });
 
- dropdownlist example:
+ # dropdownlist example:
+ 
                 $("#selectId").EasyWebFactorySelect({
                     data: categorydata,
                     select: function (item) {
