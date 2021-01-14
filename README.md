@@ -42,7 +42,7 @@ this is a tree component, jquery and font-awesome is required
 
            $("#categorytree").EasyWebFactoryTree({
                 data: categorydata,
-                menuClick1: function (itemdata, mouseEvent) {
+                menuClick: function (itemdata, mouseEvent) {
                    //use this event will display 3 flow button (add,edit,delete)
                     var $obj = $(mouseEvent.target); // this is 
                     if ($obj.hasClass("fa-remove")) {
