@@ -39,22 +39,37 @@ for example:
                     }]
                 }]
             }];
-   $("#categorytree").EasyWebFactoryTree({
-        data: categorydata,
-        menuClick1: function (itemdata, mouseEvent) {
-           //use this event will display 3 flow button (add,edit,delete)
-            var $obj = $(mouseEvent.target); // this is 
-            if ($obj.hasClass("fa-remove")) {
-                // delete button is clicked
-            } else if ($obj.hasClass("fa-plus")) {
-                // add button is clicked
-            } else if ($obj.hasClass("fa-edit")) {
-               // edit button is clicked
-            }
-            console.log($obj);
-        },
-        itemClick: function (rowdata, $treeitem) {
-          // this is click event
-            console.log(rowdata);
-        }
-    });
+
+           $("#categorytree").EasyWebFactoryTree({
+                data: categorydata,
+                menuClick1: function (itemdata, mouseEvent) {
+                   //use this event will display 3 flow button (add,edit,delete)
+                    var $obj = $(mouseEvent.target); // this is 
+                    if ($obj.hasClass("fa-remove")) {
+                        // delete button is clicked
+                    } else if ($obj.hasClass("fa-plus")) {
+                        // add button is clicked
+                    } else if ($obj.hasClass("fa-edit")) {
+                       // edit button is clicked
+                    }
+                    console.log($obj);
+                },
+                itemClick: function (rowdata, $treeitem) {
+                  // this is click event
+                    console.log(rowdata);
+                }
+            });
+
+ dropdownlist example:
+                $("#selectId").EasyWebFactorySelect({
+                    data: categorydata,
+                    select: function (item) {
+                       // console.log(item);
+                    }
+                });
+                //set selected value
+                $("#selectId").EasyWebFactorySelectSet("value", "");
+                //get selected value 
+                var value = $("#selectId").EasyWebFactorySelectGet();
+                //get options
+                var options= $("#selectId").getOptions();
